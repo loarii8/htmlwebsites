@@ -1,0 +1,231 @@
+<!DOCTYPE>
+<html>
+	<head>
+	</head>
+	<body>
+		 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Review: Intel Core i9 Ultra & NVIDIA RTX 5090</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #f4f4f4;
+            }
+            50% {
+                background-color: #e0f7fa;
+            }
+            100% {
+                background-color: #ffe0b2;
+            }
+        }
+
+        header {
+            background-color: #4A90E2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-right: 20px;
+            float: left;
+        }
+
+        .content {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .sidebar-button, .content-button, .contact-button {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar-button:hover, .content-button:hover, .contact-button:hover {
+            background-color: #357ABD;
+        }
+
+        .specs, .performance, .guides, .contact {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        h1:hover, h2:hover, h3:hover {
+            color: #4A90E2;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        ul li {
+            padding: 5px 0; /* Add some padding for list items */
+        }
+
+        ul li:hover {
+            background-color: #e0f7fa;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4A90E2;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tech Review: Intel Core i9 Ultra & NVIDIA RTX 5090</h1>
+        <nav>
+            <ul>
+                <li><a href="#specs">Specifications</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#guides">User Guides</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container clearfix">
+        <aside class="sidebar">
+            <h2>Latest News</h2>
+            <p>Stay updated with the latest tech news and releases.</p>
+            <button class="sidebar-button">Subscribe</button>
+        </aside>
+
+        <main class="content">
+            <h2>Welcome to Our Tech Review</h2>
+            <p>Explore the latest advancements in technology with our in-depth reviews of the Intel Core i9 Ultra and NVIDIA RTX 5090.</p>
+            <button class="content-button">Read More</button>
+        </main>
+    </div>
+
+    <section id="specs" class="specs">
+        <h2>Specifications</h2>
+        <h3>Intel Core i9 Ultra</h3>
+        <ul>
+            <li>Architecture: 10nm SuperFin</li>
+            <li>Cores: 16</li>
+            <li>Threads: 32</li>
+            <li>Base Clock: 3.0 GHz</li>
+            <li>Boost Clock: Up to 5.0 GHz</li>
+            <li>Thermal Design Power (TDP): 125W</li>
+        </ul>
+        <h3>NVIDIA RTX 5090</h3>
+        <ul>
+            <li>CUDA Cores: 16,384</li>
+            <li>Memory: 24GB GDDR7</li>
+            <li>Ray Tracing Cores: 3rd Generation</li>
+            <li>Tensor Cores: 4th Generation</li>
+            <li>DLSS Support: Yes</li>
+        </ul>
+    </section>
+
+    <section id="performance" class="performance">
+        <h2>Performance Benchmarks</h2>
+        <p>The Intel Core i9 Ultra and NVIDIA RTX 5090 deliver exceptional performance in gaming and content creation.</p>
+        <ul>
+            <li>Gaming Performance: Up to 20% faster than the previous generation.</li>
+            <li>Content Creation: Significant improvements in rendering and editing times.</li>
+            <li>Power Efficiency: Better thermal management and reduced power consumption.</li>
+        </ul>
+    </section>
+
+    <section id="guides" class="guides">
+        <h2>User Guides</h2>
+        <p>Find helpful guides and tutorials to get the most out of your Intel Core i9 Ultra and NVIDIA RTX 5090.</p>
+        <ul>
+            <li><a href="#">Setting Up Your New CPU</a></li>
+            <li><a href="#">Optimizing GPU Performance</a></li>
+            <li><a href="#">Troubleshooting Common Issues</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need support? Feel free to reach out to us.</p>
+        <button class="contact-button">Contact</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tech Review. All rights reserved.</p>
+    </footer>
+	</body>
+</html>

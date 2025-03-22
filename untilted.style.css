@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #4A90E2;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* List Styles */
+ul, ol {
+    list-style: none; /* Remove default bullets/numbers */
+    padding-left: 20px; /* Indent nested lists */
+    margin: 0;
+}
+
+li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s; /* Added background-color transition */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+/* Hover effect for list items */
+li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Pseudo-element for decorative effect */
+li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: #4A90E2; /* Decorative dot */
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+/* Hover effect for the decorative dot */
+li:hover::before {
+    transform: translateY(-50%) scale(1.5); /* Enlarge on hover */
+}
