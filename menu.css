@@ -6,6 +6,8 @@ body {
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    background-image: linear-gradient(45deg, #2c3e50 25%, #34495e 25%, #34495e 50%, #2c3e50 50%, #2c3e50 75%, #34495e 75%, #34495e 100%);
+    background-size: 56.57px 56.57px;
 }
 
 h1 {
@@ -17,15 +19,21 @@ h1 {
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s; /* Added background-color transition */
     position: relative; /* For pseudo-element positioning */
     overflow: hidden; /* To contain the pseudo-element */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    padding: 20px;
+    border-bottom: 3px solid rgba(173, 216, 230, 0.3);
 }
 
 /* Keyframes for fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -34,6 +42,10 @@ ul, ol {
     list-style: none; 
     padding-left: 20px; 
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 li {
@@ -45,15 +57,19 @@ li {
     padding: 15px;
     margin: 10px 0;
     font-family: "Lucida Console";
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s; /* Added background-color transition */
-    position: relative; /* For pseudo-element positioning */
-    overflow: hidden; /* To contain the pseudo-element */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover effect for list items */
 li:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: lightblue;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 /* Pseudo-element for decorative effect */
@@ -64,41 +80,70 @@ li::before {
     top: 50%;
     width: 10px;
     height: 10px;
-    background: #4A90E2; /* Decorative dot */
+    background: #4A90E2;
     border-radius: 50%;
     transform: translateY(-50%);
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
 }
 
 /* Hover effect for the decorative dot */
 li:hover::before {
-    transform: translateY(-50%) scale(1.5); /* Enlarge on hover */
+    transform: translateY(-50%) scale(1.5);
+    background: lightblue;
+    box-shadow: 0 0 20px rgba(173, 216, 230, 0.8);
 }
+
 a {
     color: lightblue;
-    text-decoration:none;
+    text-decoration: none;
     padding: 15px;
     margin: 10px 0;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s; /* Added background-color transition */
-    position: relative; /* For pseudo-element positioning */
-    overflow: hidden; /* To contain the pseudo-element */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-weight: 500;
 }
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(173, 216, 230, 0.5);
+}
+
 p {
     text-align: center;
     color: yellow;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
 }
+
 .button {
     display: inline-block;
     padding: 12px 24px;
-     background-color: #218838;
-     color: #007BFF;
+    background-color: #218838;
+    color: #007BFF;
     font-weight: bold;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-size: 1em;
     margin-top: 15px;
-    transition: fadeIn 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
 .container {
@@ -109,4 +154,30 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     animation: fadeIn 2s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Added new animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Added smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Added styles for images inside li elements */
+li img {
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+li:hover img {
+    transform: rotate(360deg);
 }
