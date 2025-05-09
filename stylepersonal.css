@@ -68,6 +68,12 @@ li:hover::before {
     transform: translateY(-50%) scale(1.5);
 }
 
+/* Add spacing between parent li and nested ul */
+li > ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 /* Link Styling */
 a {
     color: lightblue;
@@ -85,6 +91,7 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Button Class */
 .button {
     display: inline-block;
     background-color: #4A90E2;
@@ -96,7 +103,7 @@ a:hover {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    box-sizing: border-box; /* Prevents padding from changing box size */
+    box-sizing: border-box;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
@@ -104,14 +111,12 @@ a:hover {
     background-color: #357ABD;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    /* DO NOT change padding/margin or text-decoration here */
 }
-
 
 /* Paragraph Style */
 p {
     text-align: center;
-    color: #ffeb3b; /* Brighter yellow */
+    color: #ffeb3b;
 }
 
 /* Responsive Design */
